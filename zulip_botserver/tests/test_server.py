@@ -86,7 +86,7 @@ class BotServerTests(BotServerTestCase):
         assert opts.hostname == '127.0.0.1'
         assert opts.port == 5002
 
-    def test_read_config_file(self):
+    def test_read_config_file(self) -> Any:
         with self.assertRaises(IOError):
             server.read_config_file("nonexistentfile.conf")
         current_dir = os.path.dirname(os.path.abspath(__file__))
